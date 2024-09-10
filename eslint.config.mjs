@@ -12,7 +12,8 @@ export default [
   pluginReact.configs.flat.recommended,
   {
     rules: {
-      "no-unused-vars": ["warn", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }]
+      "no-unused-vars": ["warn", { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }],
+      '@typescript-eslint/no-unused-vars': 'off'
     }
   }
 ];
