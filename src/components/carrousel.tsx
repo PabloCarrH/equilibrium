@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "./card.tsx";
 
 type CardCarouselProps = {
-    cards: Array<typeof Card>;
+    cards: JSX.Element[];
     title: string;
 };
 
@@ -24,9 +24,9 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ cards, title }) => {
                 <button className="btn-carousel" onClick={prevCard}>←</button>
                 <div className="w-5/6 max-sm:h-full flex justify-start gap-y-2 items-center h-4/5 overflow-hidden relative">
                     <div className="flex transition-transform duration-500 ease-in-out h-full w-full relative items-center" style={{ transform: `translateX(-${currentCard * 100}%)` }}>
-                        {cards.map((CardComponent, index) => (
+                        {cards.map((card, index) => (
                             <div key={index} className="w-full h-full flex items-center flex-shrink-0 relative justify-center">
-                                <CardComponent />
+                                <Card name={card.props.name} image={card.props.image} price={card.props.price} description={card.props.description} schedule={card.props.schedule} dates={card.props.dates}/>
                             </div>
                         ))}
                     </div>
