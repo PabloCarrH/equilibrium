@@ -1,7 +1,23 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+@import 'bulma/sass/utilities/initial-variables';
+@import 'bulma/sass/utilities/derived-variables';
+
+.border-outline {
+  border: 2px solid $primary;
+  box-shadow: none;
+
+  &.is-success {
+    border-color: $success;
+  }
+
+  &.is-danger {
+    border-color: $danger;
+  }
+
+  &.is-info {
+    border-color: $info;
+  }
+
+  &.is-warning {
+    border-color: $warning;
+  }
+}
