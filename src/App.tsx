@@ -1,63 +1,18 @@
 import React from "react";
 import "./index.css";
-import Card from "./components/card.tsx";
-import CardCarousel from "./components/carrousel.tsx";
+import SPA from "./views/spa.tsx";
+import Geriatrico from "./views/geriatrico.tsx";
+import Salud from "./views/salud.tsx";
+import Contact from "./views/contact.tsx";
+
 const App: React.FC = () => {
-    const info = [{
-        name: "Masaje relajante",
-        price: "500",
-        description: "Masaje de cuerpo completo",
-        dates: [
-            {
-                name: "Juan Perez",
-                sede: "Sede 1",
-                consultorio: "Consultorio 1",
-                date: "2021-10-10",
-                time: "10:00",
-            },
-            {
-                name: "Maria Lopez",
-                sede: "Sede 2",
-                consultorio: "Consultorio 2",
-                date: "2021-10-12",
-                time: "12:00",
-            },
-        ],},
-        {
-        name: "Masaje reductor",
-        price: "700",
-        description: "Masaje reductor de abdomen",
-        dates: [
-            {
-                name: "Juan Lopez",
-                sede: "Sede 1",
-                consultorio: "Consultorio 1",
-                date: "2021-10-10",
-                time: "10:00",
-            },
-            {
-                name: "Maria Perez",
-                sede: "Sede 2",
-                consultorio: "Consultorio 2",
-                date: "2021-10-12",
-                time: "12:00",
-            },
-            {
-                name: "Cristhian Tapiero",
-                sede: "Sede 1",
-                consultorio: "Consultorio 1",
-                date: "2024-11-09",
-                time: "13:00"
-            }
-        ],},
-    ]
-    const cards: JSX.Element[] = [];
-    for (let i = 0; i < info.length; i++) {
-        cards.push(<Card name={info[i].name} price={info[i].price} description={info[i].description} dates={info[i].dates} image="default.jpg" schedule="9:00 AM - 5:00 PM" />)
-    }
+    
     return (
-        <div className="relative bg-brand-100 w-screen h-screen flex flex-col items-center justify-center">
-            <CardCarousel cards={cards} title="Servicios de SPA" />
+        <div className="relative w-screen h-screen flex flex-col flex-shrink-0 overflow-x-hidden">
+            <SPA/>
+            <Salud/>
+            <Geriatrico/>
+            <Contact/>
         </div>
     );
 };

@@ -7,21 +7,21 @@ Requerimientos Funcionales:
         	Tratamientos corporales ✓
         	Servicios de SPA ✓
     o	Cada servicio debe tener una descripción detallada, con imágenes ilustrativas y precios asociados.✓
-2.	Gestión de Servicios de Salud Integral:
+2.	Gestión de Servicios de Salud Integral: ✓
     o	El sitio web debe mostrar los servicios ofrecidos por "EGES Servicios de Salud Integral," que incluyen:
-        	Medicina general
-        	Medicina homeopática
-        	Laboratorio clínico
-        	Servicios de enfermería
-        	Clínica de heridas
+        	Medicina general ✓
+        	Medicina homeopática ✓
+        	Laboratorio clínico ✓
+        	Servicios de enfermería ✓
+        	Clínica de heridas ✓
     o	Cada servicio debe contar con una descripción, horarios disponibles y la opción de agendar citas.
 3.	Centro Geriátrico:
-    o	Incluir una sección para "EGES Centro Geriátrico" con información sobre los servicios ofrecidos, actividades para los residentes y opciones de contacto.
+    o	Incluir una sección para "EGES Centro Geriátrico" con información sobre los servicios ofrecidos, actividades para los residentes y opciones de contacto. ✓✓
 4.	Sistema de Reservas y Citas:
-    o	Implementar un sistema de reservas en línea para que los usuarios puedan agendar citas para tratamientos de estética, spa, y consultas médicas.
+    o	Implementar un sistema de reservas en línea para que los usuarios puedan agendar citas para tratamientos de estética, spa, y consultas médicas. ✓
     o	Confirmación de reservas mediante correo electrónico y/o SMS.
 5.	Información de Contacto y Ubicación:
-    o	Incluir una sección de contacto con un formulario para consultas generales.
+    o	Incluir una sección de contacto con un formulario para consultas generales. ✓
     o	Mostrar la ubicación del centro en un mapa interactivo.
 6.	Blog o Noticias:
     o	Sección para publicaciones sobre salud, bienestar, y belleza, actualizadas periódicamente.
