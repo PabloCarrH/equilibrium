@@ -11,6 +11,12 @@
 }
 @layer components {
     .btn-carousel {
-      @apply size-10 lg:size-14 text-xl bg-brand-500 z-20 font-extrabold hover:bg-brand-300
+      @apply size-10 lg:size-14 text-xl hover:bg-brand-500/40 text-center z-20 font-extrabold bg-transparent rounded-full flex justify-center items-center
+    }
+    .btn-tab-selected {
+      @apply py-1 px-4 max-sm:px-2 min-w-24 max-sm:min-w-16 text-center font-semibold text-xl max-sm:text-base rounded-xl bg-brand-400/80 text-brand-100 hover:cursor-pointer
+    }
+    .btn-tab {
+      @apply py-1 px-4 max-sm:px-2 min-w-24 max-sm:min-w-16 text-center text-xl max-sm:text-base rounded-xl bg-transparent text-brand-400 border border-brand-400 hover:cursor-pointer hover:bg-brand-400/70 hover:text-brand-100
     }
   }

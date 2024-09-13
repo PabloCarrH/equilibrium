@@ -56,7 +56,7 @@ const Salud: React.FC = () => {
         cards.push(<Card name={info[i].name} price={info[i].price} description={info[i].description} dates={info[i].dates} image="default.jpg" schedule="9:00 AM - 5:00 PM" />)
     }
     return (
-        <div className="bg-brand-100 w-full h-full flex justify-center items-center flex-shrink-0">
+        <div className="w-full h-full flex justify-center items-center flex-shrink-0">
             <CardCarousel title="Equilibrium Centro de Servicios de Salud Integral" cards={cards}/>
         </div>
     );
