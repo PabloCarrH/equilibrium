@@ -7,15 +7,17 @@ module.exports = {
     extend: {
       colors: {
         'brand': {
-          100: "#737373",
-          200: "#8C8C8C",
-          300: "#BFBFBF",
-          400: "#F2F2F2",
-          500: "#D9D9D9"
+          100: "#F2F2F2",
+          200: "#7A8C51",
+          300: "#022601",
+          400: "#034001",
+          500: "#227345"
         }
       },
-      backgroundImage: {
-      },
+      fontFamily: {
+        'poppins': ["Poppins", "sans-serif"],
+        'lobster': ["Lobster", "cursive"],
+      }
     },
   },
   plugins: [],

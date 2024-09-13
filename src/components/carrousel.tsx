@@ -19,7 +19,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ cards, title }) => {
 
     return (
         <div className="flex justify-center items-center w-full h-full flex-col">
-            <h2 className="font-semibold text-3xl text-brand-400 md:w-5/6 max-sm:justify-center max-sm:text-xl">{title}</h2>
+            <h2 className="font-semibold font-lobster text-3xl text-brand-400 md:w-5/6 max-sm:justify-center max-sm:text-xl">{title}</h2>
             <div className="flex items-center h-5/6 w-full relative justify-center gap-2">
                 <button className="btn-carousel" onClick={prevCard}>←</button>
                 <div className="w-5/6 max-sm:h-full flex justify-start gap-y-2 items-center h-4/5 overflow-hidden relative">
