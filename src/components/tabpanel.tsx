@@ -9,7 +9,7 @@ const Tabs: React.FC = () => {
         setActiveTab(tab);
     }
     return (
-        <div className='relative flex flex-col w-5/6 h-5/6 mb-2'>
+        <div className='relative flex flex-col w-5/6 max-sm:w-full h-5/6 mb-2'>
             <nav className='relative top-0 left-0 w-full h-fit'>
                 <ul className='flex w-full h-max justify-evenly items-center'>
                     <li className={`transition-colors ${activeTab == "spa" ? "btn-tab-selected":"btn-tab"}`} onClick={() => setTab("spa")}>SPA</li>

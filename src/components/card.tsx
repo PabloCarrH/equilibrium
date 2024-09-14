@@ -12,7 +12,7 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({name, price, description, schedule, dates}) => {
     const [open, setOpen] = useState(false);
     return (
-        <div className="bg-brand-400/40 w-11/12 h-full flex justify-evenly items-center md:px-2 max-md:gap-x-4 max-sm:h-5/6 px-4 max-sm:flex-col max-sm:pt-6 max-sm:pb-4 max-sm:gap-y-4 text-brand-100">
+        <div className="bg-brand-400/40 w-11/12 h-full flex justify-evenly items-center md:px-2 max-md:gap-x-4 max-sm:h-5/6 max-sm:flex-col max-sm:pt-6 max-sm:pb-4 max-sm:gap-y-4 text-brand-100">
             <div className="bg-brand-400 w-5/12 h-4/5 flex items-center justify-center max-sm:w-3/4 max-sm:h-2/5"> 
                 <h2>Imagén de servicio</h2>
             </div>

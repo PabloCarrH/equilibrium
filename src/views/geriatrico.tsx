@@ -2,7 +2,7 @@ import React from "react";
 
 const Geriatrico: React.FC = () => {
     return (
-        <div className="flex justify-center max-sm:justify-evenly items-center w-full h-5/6 max-sm:h-fit flex-col">
+        <div className="flex justify-center max-sm:justify-evenly gap-y-2 items-center w-full h-5/6 max-sm:h-fit flex-col">
             <h2 className="font-semibold font-poppins text-center text-xl text-brand-400 md:w-5/6 max-sm:justify-center max-sm:text-lg">Equilibrium Centro Geriatrico</h2>
             <div className="flex items-center h-full w-full relative justify-center gap-2">
                 <div className="w-5/6 max-sm:h-full flex justify-center gap-y-2 items-center h-5/6 overflow-hidden relative">
