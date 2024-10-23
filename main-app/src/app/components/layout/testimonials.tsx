@@ -8,6 +8,7 @@ export function Testimonials() {
       author: 'Sarah Johnson',
       role: 'Entusiasta del Bienestar',
       rating: 5,
+      id: 1,
     },
     {
       content:
@@ -15,6 +16,7 @@ export function Testimonials() {
       author: 'Michael Chen',
       role: 'Profesional de Negocios',
       rating: 5,
+      id: 2,
     },
     {
       content:
@@ -22,12 +24,13 @@ export function Testimonials() {
       author: 'Emma Rodriguez',
       role: 'Cuidadora Familiar',
       rating: 5,
+      id: 3,
     },
   ];
 
   return (
-    <section className="section has-background-light" id="testimonials">
-      <div className="container">
+    <section className="section full-height" id="testimonials">
+      <div className="container full-height-container">
         <div className="has-text-centered mb-6">
           <h2 className="title is-2">Lo que dicen nuestros clientes</h2>
           <p className="subtitle is-4">
@@ -35,10 +38,10 @@ export function Testimonials() {
           </p>
         </div>
 
-        <div className="columns">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="column is-4">
-              <div className="card testimonial-card">
+        <div className="columns is-multiline">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="column is-4">
+              <article className="card testimonial-card">
                 <div className="card-content">
                   <div className="mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -51,12 +54,12 @@ export function Testimonials() {
                     ))}
                   </div>
                   <p className="mb-4">{testimonial.content}</p>
-                  <div>
+                  <footer>
                     <p className="has-text-weight-bold">{testimonial.author}</p>
                     <p className="is-size-7">{testimonial.role}</p>
-                  </div>
+                  </footer>
                 </div>
-              </div>
+              </article>
             </div>
           ))}
         </div>
