@@ -15,6 +15,13 @@
     ],
     "sharedGlobals": []
   },
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "disableCloudWarnings": true
+      }
+    }
+  },
   "nxCloudId": "66e2103b60a28648599420c2",
   "plugins": [
     {

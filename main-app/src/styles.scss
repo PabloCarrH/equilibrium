@@ -1,1 +1,30 @@
 @import 'bulma';
+
+.full-height {
+  height: 100vh; /* 100% de la altura de la ventana del navegador */
+  display: flex; /* Usar flexbox para centrar el contenido */
+  flex-direction: column; /* Orientar los hijos verticalmente */
+  justify-content: center; /* Centrar verticalmente */
+}
+
+.full-height-container {
+  flex: 1; /* Permitir que el contenedor tome toda la altura disponible */
+  display: flex; /* Usar flexbox dentro del contenedor */
+  flex-direction: column; /* Alinear elementos verticalmente */
+  justify-content: center; /* Centrar verticalmente dentro del contenedor */
+  align-items: center; /* Centrar horizontalmente */
+}
+
+.columns {
+  display: flex; /* Usar flexbox para alinear las columnas */
+  flex-wrap: wrap; /* Permitir que las columnas se ajusten en varias filas */
+}
+
+.box {
+  flex: 1; /* Permitir que cada tarjeta crezca para llenar el espacio */
+  min-height: 230px; /* Altura mínima para las tarjetas */
+}
+
+.about {
+  min-height: 180px !important; /* Altura mínima para las tarjetas */
+}

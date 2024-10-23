@@ -1,12 +1,15 @@
-import Login from './components/login';
 import { Route, Routes } from 'react-router-dom';
+import Dashboard from './components/dashboard';
+import Login from './components/login';
 
-export function App() {
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Login />} />
-      {/* Puedes agregar más rutas aquí */}
-    </Routes>
+    <div className="min-h-screen bg-neutral-50">
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/*" element={<Dashboard />} />
+      </Routes>
+    </div>
   );
 }
 
