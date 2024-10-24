@@ -1,0 +1,58 @@
+{
+  "name": "booking",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "booking/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/booking",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "booking/src/main.ts",
+        "tsConfig": "booking/tsconfig.app.json",
+        "assets": ["booking/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "booking:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "booking:build:development"
+        },
+        "production": {
+          "buildTarget": "booking:build:production"
+        }
+      }
+    }
+  }
+}

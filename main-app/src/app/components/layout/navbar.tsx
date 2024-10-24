@@ -21,28 +21,28 @@ const Navbar: React.FC = () => {
 
         <div className="navbar-menu">
           <div className="navbar-end">
-            <Link to="/" className="navbar-item">
+            <Link to="/dashboard" className="navbar-item">
               <button className="button is-success">Inicio</button>
             </Link>
-            <Link to="/services" className="navbar-item">
+            <Link to="/dashboard/services" className="navbar-item">
               Servicios Estéticos
             </Link>
-            <Link to="/health-services" className="navbar-item">
+            <Link to="/dashboard/health-services" className="navbar-item">
               Servicios de Salud
             </Link>
-            <Link to="/geriatric-center" className="navbar-item">
+            <Link to="/dashboard/geriatric-center" className="navbar-item">
               Centro Geriátrico
             </Link>
-            <Link to="/booking" className="navbar-item">
+            <Link to="/dashboard/booking" className="navbar-item">
               Reservas
             </Link>
-            <Link to="/blog" className="navbar-item">
+            <Link to="/dashboard/blog" className="navbar-item">
               Blog
             </Link>
-            <Link to="/testimonials" className="navbar-item">
+            <Link to="/dashboard/testimonials" className="navbar-item">
               Testimonios
             </Link>
-            <Link to="/contact" className="navbar-item">
+            <Link to="/dashboard/contact" className="navbar-item">
               Contacto
             </Link>
           </div>

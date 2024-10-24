@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Outlet, Route, Routes } from 'react-router-dom';
 import { Contact } from 'lucide-react';
 import { About } from './layout/about';
 import { Testimonials } from './layout/testimonials';
@@ -14,16 +14,7 @@ function Dashboard() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/health-services" element={<HealthServices />} />
-        <Route path="/geriatric-center" element={<GeriatricCenter />} />
-        <Route path="/booking" element={<BookingSystem />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Outlet />
       <Footer />
     </>
   );

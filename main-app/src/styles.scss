@@ -1,7 +1,7 @@
 @import 'bulma';
 
 .full-height {
-  height: 100vh; /* 100% de la altura de la ventana del navegador */
+  min-height: 100vh;
   display: flex; /* Usar flexbox para centrar el contenido */
   flex-direction: column; /* Orientar los hijos verticalmente */
   justify-content: center; /* Centrar verticalmente */
@@ -20,7 +20,7 @@
   flex-wrap: wrap; /* Permitir que las columnas se ajusten en varias filas */
 }
 
-.box {
+.card {
   flex: 1; /* Permitir que cada tarjeta crezca para llenar el espacio */
   min-height: 230px; /* Altura mínima para las tarjetas */
 }

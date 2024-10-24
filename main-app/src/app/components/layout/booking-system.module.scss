@@ -1,7 +1,18 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.form-container {
+  margin-top: 2rem;
+  max-width: 1000px; /* Ancho máximo del cuadro */
+  margin-left: auto;
+  margin-right: auto;
+
+  .title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.form {
+  width: 500px;
+}
+.box {
+  width: 500px !important;
+}

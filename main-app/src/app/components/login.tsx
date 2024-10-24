@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importa el hook de navegación
 import styles from './login.module.scss';
 import logo from '../../assets/logos/spa-small.png';
 
@@ -6,16 +7,39 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [token, setToken] = useState('');
+  const navigate = useNavigate(); // Inicializa el hook de navegación
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:3001/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
-    });
-    const data = await response.json();
-    setMessage(data.message);
+    try {
+      const response = await fetch('http://localhost:3001/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setMessage(errorData.message || 'Error de autenticación');
+        return;
+      }
+
+      const data = await response.json();
+      if (data.token) {
+        setToken(data.token);
+        setMessage('Inicio de sesión exitoso');
+        localStorage.setItem('token', data.token);
+
+        // Redirecciona al dashboard tras un inicio de sesión exitoso
+        navigate('/dashboard'); // Cambia '/dashboard' a la ruta que desees
+      } else {
+        setMessage(data.message || 'Credenciales incorrectas');
+      }
+    } catch (error) {
+      setMessage('Error en la conexión o el servidor');
+      console.error('Error al iniciar sesión:', error);
+    }
   };
 
   return (
@@ -64,7 +88,7 @@ const Login = () => {
             <div className="field has-addons has-addons-right">
               <div className="control">
                 <button className="button is-primary is-outlined" type="submit">
-                  Iniciar Sesion
+                  Iniciar Sesión
                 </button>
               </div>
             </div>

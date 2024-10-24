@@ -14,7 +14,7 @@ export function FeatureCard({
 }: FeatureCardProps) {
   return (
     <div className="column is-one-third">
-      <div className="box about has-text-centered about-feature is-primary is-outlined">
+      <div className="box about card has-text-centered about-feature is-primary is-outlined">
         <div className="about-feature-icon mb-3">
           <Icon className="is-size-4" />
         </div>
